@@ -3,24 +3,29 @@
   <article class="kaartje">
 
     <article class="voorkant">
-      <header>
+      <header class="text-content">
         <h1>{{ person.name }}</h1>
+        <p>{{ person.birthdate }}</p>
       </header>
       <img src="assets/IMG_20230629_215307_075.jpg" alt="" width="800" height="800">
-      <p>Ik ben 17 jaar en woon in Amersfoort.<br></p>
+      <p class="text-content">Ik ben 17 jaar en woon in Amersfoort.<br></p>
     </article>
 
     <article class="achterkant">
       <div>
         <h2>Hobby's</h2>
         <ol>
-          <li>Sportschool</li>
+          <li>Sporten</li>
+          <li>Vrienden</li>
+          <li>Vakantie</li>
+          <li>Produceren</li>
         </ol>
       </div>
       <div>
         <h2>Werkervaring</h2>
         <ol>
           <li>Hovenier</li>
+          <li>Horeca</li>
         </ol>
       </div>
       <div>
@@ -33,5 +38,18 @@
     </article>
 
   </article>
+
+  <button>Spin</button>
+
+  <script>
+    const button = document.querySelector("button")
+    const kaartje = document.querySelector(".kaartje")
+
+    button.addEventListener('click', spin)
+
+    function spin() {
+      kaartje.classList.toggle('hover')
+    }
+  </script>
 
 {% render 'partials/foot.liquid' %}
