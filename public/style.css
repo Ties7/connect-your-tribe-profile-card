@@ -22,15 +22,15 @@ ol,ul {
 }
 
 .kaartje {
-  height: 400px;
-  width: 362.5px;
+  height: 300px;
+  width: 450px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   transform-style: preserve-3d;
-  transition: 2s ease-in-out;
+  transition: .3s ease-in-out;
   border-radius: 1rem;
   will-change: transform;
   background: rgb(136, 136, 136);
@@ -39,19 +39,19 @@ ol,ul {
 }
 
 .voorkant,.achterkant{
-  width: 100%;
-  height: 100%;
+  height: 300px;
+  width: 450px;
   position: absolute;
   backface-visibility: hidden;
   overflow: hidden;
 }
 
 .achterkant{
-  transform: rotateY(180deg);
+  transform: rotatex(180deg);
 }
 
 .kaartje:hover{
-  transform: rotateY(180deg);
+  transform: rotatex(180deg);
 }
 
 header {
@@ -89,7 +89,7 @@ p {
 }
 
 article > p {
-  width: 100%;
+  max-width: 100vw;
   margin-top: 0;
   padding: 3rem 2rem;
   border-radius: 0 0 1rem 1rem;
