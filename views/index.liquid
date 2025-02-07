@@ -5,10 +5,11 @@
     <article class="voorkant">
       <header class="text-content">
         <h1>{{ person.name }}</h1>
-        <p>{{ person.birthdate }}</p>
+        <p>{{ person.birthdate | date: "%d %B %Y" }}</p>
       </header>
       <img src="assets/IMG_20230629_215307_075.jpg" alt="" width="800" height="800">
       <p class="text-content">Ik ben 17 jaar en woon in Amersfoort.<br></p>
+      <p>Het is vandaag {{ 'now' | date: '%d %b %Y, %I:%M' }}</p>
     </article>
 
     <article class="achterkant">
@@ -39,7 +40,7 @@
 
   </article>
 
-  <button>Spin</button>
+  <button>FLIP</button>
 
   <script>
     const button = document.querySelector("button")
